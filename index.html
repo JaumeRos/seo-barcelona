@@ -4,45 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEO Barcelona Conference</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.6;
+            background: #f5f5f7;
+            color: #1d1d1f;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1d1d1f 0%, #313133 100%);
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.4em;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .waitlist-form {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: -80px;
+            position: relative;
+        }
+
+        .secondary-forms {
+            display: flex;
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .form-section {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1d1d1f;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #0071e3;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            background: #0071e3;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background: #0077ED;
+        }
+
+        @media (max-width: 768px) {
+            .secondary-forms {
+                flex-direction: column;
+            }
+            
+            header h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Join the SEO Barcelona Conference Waitlist</h1>
-        <p>Be the first to know about the biggest SEO event in Barcelona!</p>
+        <h1>SEO Barcelona Conference</h1>
+        <p>Join the waitlist for Barcelona's premier SEO event. Be the first to know about dates, speakers, and early bird tickets.</p>
     </header>
 
-    <section id="waitlist">
-        <h2>Waitlist Signup</h2>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="_replyto" placeholder="Your Email" required>
-            <button type="submit">Join Waitlist</button>
-        </form>
-    </section>
+    <div class="container">
+        <div class="waitlist-form">
+            <h2>Join the Waitlist</h2>
+            <form action="https://formspree.io/f/mldepwpp" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <button type="submit">Join Waitlist</button>
+            </form>
+        </div>
 
-    <section id="speakers">
-        <h2>Speaker Application</h2>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="_replyto" placeholder="Your Email" required>
-            <textarea name="topic" placeholder="Proposed Topic" required></textarea>
-            <button type="submit">Apply as Speaker</button>
-        </form>
-    </section>
+        <div class="secondary-forms">
+            <div class="form-section">
+                <h2>Speak at the Event</h2>
+                <form action="https://formspree.io/f/mzzbjajy" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="topic" placeholder="Tell us about your proposed topic" required></textarea>
+                    <button type="submit">Apply as Speaker</button>
+                </form>
+            </div>
 
-    <section id="sponsors">
-        <h2>Sponsor Application</h2>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="_replyto" placeholder="Your Email" required>
-            <input type="number" name="budget" placeholder="Max Budget" required>
-            <button type="submit">Apply as Sponsor</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 SEO Barcelona Conference</p>
-    </footer>
+            <div class="form-section">
+                <h2>Become a Sponsor</h2>
+                <form action="https://formspree.io/f/meoqrlrn" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="company" placeholder="Company Name" required>
+                    <input type="number" name="budget" placeholder="Sponsorship Budget (€)" required>
+                    <button type="submit">Apply as Sponsor</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
